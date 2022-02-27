@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일단 만드는 javascript</title>
+</head>
+<body>
+    <h1>객체(object) - Date 객체 연습</h1>
+    <script>
+        //객체 만들어보기
+        var person = {
+            name: 'leehyerin',
+            sayHello: function() { console.log('hello'); }
+        }
+        console.log(person.name);
+        person.sayHello();
+
+        //1. Date 객체 생성
+        var now = new Date();
+        //2. 연도를 가져오는 메소드 .getFullYear()
+        console.log("연도 : " + now.getFullYear());
+        //3. 월 정보를 가져오는 메소드 .getMonth()
+        console.log("월 : " + now.getMonth());
+        //4. 일 정보를 가져오는 메소드 .getDate()
+        console.log("일 : " + now.getDate());
+        //5. 1970년 1월 1일 00:00:00울 기준으로 흐른 시간을 밀리초로 표시하는 메소드 .getTime()
+        console.log("흐른 시간(1970/1/1 이후) : " + now.getTime());
+        //6. 특정 일의 Date 객체 생성
+        var christmas = new Date('2022.12.25');
+        console.log(christmas);
+        //7. 특정 ms의 Date 객체 생성 -> 1970년 1월 1일 0시를 기준으로 지난 초를 괄호 안에 넣어주면 지난 날짜를 출력해줌
+        var ms = new Date(1000);
+        console.log(ms);
+    </script>
+</body>
+</html>
